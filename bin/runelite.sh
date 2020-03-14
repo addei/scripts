@@ -45,7 +45,7 @@ installGame() {
     then
         echo "Yes, the exit status was $?."
         createInstFolder
-        downloadGameaddei/scripts
+        downloadGame
     else
         exit $?
     fi
