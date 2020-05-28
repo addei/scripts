@@ -1,5 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 #really small script for checking weather from terminal using wttr.in backend by igor_chubin
+
+#alias setup when script is in ~/bin
+#export PATH="${PATH}:${HOME}/bin"
+#alias weather='f(){sh weather.sh $1}; f'
+
 #made by githubuser addei
 #GPL 2.0
 
