@@ -29,11 +29,10 @@ checkDependencies() { #this function checks if the required dependencies are fou
 }
 
 checkOutputdevices() { #checks output devices
-    if [ $displayCount -gt 1 ] ; then
+    if [ $displayCount -gt 0 ] ; then
         outputdevices=($(swaymsg -p -t get_outputs | grep 'Output' | grep -oP '(?<=Output )[^ ]*' $1))
-    fi
     
-    if [ $displayCount -eq 0 ] ; then
+    else
         exit 1
     fi
 }
