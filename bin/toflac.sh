@@ -27,8 +27,8 @@ cmp --silent wavhash.txt flachash.txt || success=1
 # echo
 [ $success -eq 0 ] && echo "All good, ejecting CD now!" || echo "Some errors occured, ejecting CD now!"
 
-# eject the disc from drive
+# eject the disc from the drive
 eject -T
 
 # start ID3 Tagger
-[ $success -eq 0 ] && kid3 dir "&(pwd)" & disown kid3 ||
+[ $success -eq 0 ] && kid3 dir "&(pwd)" & disown kid3 || echo "..."
