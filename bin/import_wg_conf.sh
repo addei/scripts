@@ -9,7 +9,7 @@ echo ""${#configs[@]}" configuration file(s) found!"
 
 for i in "${configs[@]}"
 do
-    echo ""$counter"/"${configs[@]}" - "$i""
+    echo ""$counter"/"${#configs[@]}" - "$i""
     nmcli connection import type wireguard file $i
     nmcli device disconnect $(echo $i | cut -d "." -f 1)
     nmcli connection modify $(echo $i | cut -d "." -f 1) connection.autoconnect no
